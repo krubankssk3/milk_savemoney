@@ -1,0 +1,26 @@
+{
+  "name": "ระบบจัดการดื่มนมและออมเงินของนักเรียน",
+  "short_name": "นม & ออม",
+  "description": "ระบบบันทึกการดื่มนมและออมทรัพย์นักเรียน โรงเรียนบ้านละลม",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#f3f6fd",
+  "theme_color": "#0ea5e9",
+  "lang": "th",
+  "icons": [
+    {
+      "src": "https://img2.pic.in.th/pic/Logo-7aecb8e321ff2955.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "https://img2.pic.in.th/pic/Logo-7aecb8e321ff2955.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
