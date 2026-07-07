@@ -26,13 +26,20 @@
 </head>
 <body>
 <!-- ★★★ วางลิงก์เว็บแอป (ลงท้ายด้วย /exec) ตรงนี้ ★★★ -->
-<script>var EXEC_URL = "https://script.google.com/macros/s/AKfycbzB7-BqRmP-U3sHdH3by34X9IZw_lRpbMeLRM9MC0UmvwMRp5aApO5EceHTAa6pzn5dQA/exec";</script>
+<script>var EXEC_URL = "https://script.google.com/macros/s/AKfycbzB7-BqRmP-U3sHdH3by34X9IZw_lRpbMeLRM9MC0UmvwMRp5aApO5EceHTAa6pzn5dQA/exec";
+// เปลี่ยนโลโก้บน GitHub: แก้ URL ล่างนี้ให้ตรงกับที่ตั้งในระบบ แล้วอัปโหลด index.html ใหม่
+var LOGO_URL = "https://img2.pic.in.th/pic/Logo-7aecb8e321ff2955.png";</script>
 
-<div id="splash"><img src="https://img2.pic.in.th/pic/Logo-7aecb8e321ff2955.png" alt="โลโก้"><div>กำลังเปิดระบบ...</div></div>
+<div id="splash"><img id="splash-logo" alt="โลโก้"><div>กำลังเปิดระบบ...</div></div>
 <button id="install">📲 ติดตั้งแอป</button>
 
 <script>
 (function(){
+  try{
+    var sl=document.getElementById('splash-logo'); if(sl) sl.src=LOGO_URL;
+    var ai=document.querySelector('link[rel="apple-touch-icon"]'); if(ai) ai.href=LOGO_URL;
+    var fv=document.querySelector('link[rel="icon"]'); if(fv) fv.href=LOGO_URL;
+  }catch(e){}
   if(EXEC_URL.indexOf('/exec') < 0){
     document.body.innerHTML = '<div id="msg">⚠️ ยังไม่ได้ตั้งค่าลิงก์<br><br>เปิดไฟล์ <code>index.html</code> แล้วแก้ตัวแปร <code>EXEC_URL</code> ให้เป็นลิงก์เว็บแอปของคุณ (ลงท้ายด้วย <code>/exec</code>) แล้วอัปโหลดใหม่</div>';
     return;
